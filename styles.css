@@ -1,0 +1,51 @@
+/* Temel stiller */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff0073;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.game-preview {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.game-preview img {
+    max-width: 100%;
+    margin: 1rem;
+}
+
+.system-requirements {
+    background-color: #f4f4f4;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.system-requirements ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: #fff;
+}
