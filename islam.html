@@ -3,7 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+	  <script src="FireConfig.js"></script> <!-- fireconfig.js dosyasını ekleyin -->
+	
     <title>.</title>
+
+		  <style>
+
+
+    #likeButton {
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #likeButton:hover {
+      background-color: #2980b9;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #likeCount {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+	
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -48,5 +77,31 @@
 	<p style= "color:#00f2ff";>Dieser Artikel wurde anhand einer Übersetzung ins Deutsche übersetzt, daher können Fehler auftreten!</p>
 </section>
 
+
+	<script>
+  var likeCount = 0;
+
+  // Beğeni butonuna tıklandığında çağrılacak fonksiyon
+  function likePost() {
+    likeCount++;
+
+    // Firebase Realtime Database'e beğeni sayısını kaydet
+    firebase.database().ref("likes2").set(likeCount);
+
+    // Beğeni sayısını ekranda güncelle
+    document.getElementById("likeCount").innerText = likeCount + " Beğeni";
+
+    // Beğeni butonunu gizle
+    document.getElementById("likeButton").style.display = "none";
+  }
+
+  // Firebase Realtime Database'deki beğeni sayısını takip et
+  firebase.database().ref("likes2").on("value", function(snapshot) {
+    likeCount = snapshot.val() || 0;
+    document.getElementById("likeCount").innerText = likeCount + "";
+  });
+</script>
+
+	
 </body>
 </html>
