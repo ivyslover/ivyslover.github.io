@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+	  <script src="FireConfig.js"></script> <!-- fireconfig.js dosyasını ekleyin -->
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.png" sizes="32x32">
     <title>Ivy Dorothea Baira</title>
@@ -132,20 +133,7 @@
 	
 	
 	
-	  <script>
-    var firebaseConfig = {
-apiKey: "AIzaSyCR6vYIt2VJEwHM1-QxfX4BMrXBztDEx2c",
-authDomain: "ivyslover-7faf4.firebaseapp.com",
-databaseURL: "https://ivyslover-7faf4-default-rtdb.europe-west1.firebasedatabase.app",
-projectId: "ivyslover-7faf4",
-storageBucket: "ivyslover-7faf4.appspot.com",
-messagingSenderId: "191878649174",
-appId: "1:191878649174:web:cb54a1fe8976dc7265f2f7"
-    };
 
-    // Firebase'i başlat
-    firebase.initializeApp(firebaseConfig);
-  </script>
 	
 </head>
 <body>
@@ -164,10 +152,10 @@ appId: "1:191878649174:web:cb54a1fe8976dc7265f2f7"
         <p class="love-message">und ich wollte diese Gefühle ausdrücken. Ich hoffe, diese Seite reicht aus, um meine Liebe und Bewunderung für Sie auszudrücken.</p>
 	<p class="love-message">Bitte verstehen Sie mich nicht falsch, ich bin Ihr Fan 😊</p>
         <p class="translation-note">Mein Deutsch ist möglicherweise schlecht, weil ich Google Translate verwende 😅</p>
-
+		<button id="likeButton" onclick="likePost()" style="display: block; margin: auto;">❤️ <span id="likeCount"></span></button>
     </section>
     <footer>
-        <p>&copy; 2024, All rights reserved.<br>Website Designer: youtube.com/@coder.b</p> <button id="likeButton" onclick="likePost()">❤️ <span id="likeCount">0</span></button>
+       <p>&copy; 2024, All rights reserved.<br>Website Designer: youtube.com/@coder.b</p>
     </footer>
 	
 	
