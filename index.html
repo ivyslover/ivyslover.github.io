@@ -158,14 +158,16 @@
        <p> <a style="color:yellow"; href="https://furious.ignorelist.com"><b>Mit mir chatten</b></a> <br> <a style="color:white;"> &copy; 2024 </a> <a style="color:#00ff1e"; href="#">@I3ilal</a> <a style="color:white";> all rights reserved. </a> <br> <a style="color:white"; href="islam.html">&lt; Other Pages &gt;</a></p>
     </footer>
 	
-	
+	<audio id="ses" src="likes.mp3"></audio>
 	
 	<script>
   var likeCount = 0;
-
+  var ses = document.getElementById("ses");
+		
   // Beğeni butonuna tıklandığında çağrılacak fonksiyon
   function likePost() {
     likeCount++;
+    ses.play();	  
 	  
     // Firebase Realtime Database'e beğeni sayısını kaydet
     firebase.database().ref("likes").set(likeCount);
