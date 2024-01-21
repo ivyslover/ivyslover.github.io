@@ -166,8 +166,6 @@
   // Beğeni butonuna tıklandığında çağrılacak fonksiyon
   function likePost() {
     likeCount++;
-
-    alert("Danke ❤️");
 	  
     // Firebase Realtime Database'e beğeni sayısını kaydet
     firebase.database().ref("likes").set(likeCount);
