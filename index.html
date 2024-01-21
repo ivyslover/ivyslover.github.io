@@ -155,7 +155,7 @@
 		<button id="likeButton" onclick="likePost()" style="display: block; margin: auto;">❤️ <span id="likeCount"></span></button>
     </section>
     <footer>
-       <p> <a style="color:yellow"; href="https://furious.ignorelist.com"><b>Mit mir chatten</b></a> <br> <a style="color:white;"> &copy; 2024 </a> <a style="color:#00ff1e"; href="#">@I3ilal</a> <a style="color:white";> all rights reserved. </a> <br> <a style="color:white"; href="islam.html">&lt; Other Pages &gt;</a></p>
+       <p> <a style="color:yellow"; href="https://furious.ignorelist.com"><b>Mit mir chatten</b></a> <br> <a style="color:white;"> &copy; 2024 </a> <a style="color:#00ff1e"; href="#">@I3ilal</a> <a style="color:white";> all rights reserved. </a> <br> <a style="color:white"; href="islam.html"; onclick="showAlert();">&lt; Other Pages &gt;</a></p>
     </footer>
 	
 	<audio id="ses" src="likes.mp3"></audio>
@@ -185,6 +185,11 @@
     document.getElementById("likeCount").innerText = likeCount + "";
   });
 </script>
-	
+
+	<script>
+function showAlert() {
+    alert("Sie gehen auf eine andere Website!");
+}
+</script>
 </body>
 </html>
