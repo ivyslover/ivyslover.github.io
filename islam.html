@@ -91,7 +91,7 @@
 	<p>!!!</p>
 	<p style= "color:#00f2ff";>Dieser Artikel wurde anhand einer Übersetzung ins Deutsche übersetzt, daher können Fehler auftreten!</p>
 	<p style= "color:#15ff00";>Was denkst du über den Islam? Wenn Ihr Gedanke gut ist, hinterlassen Sie ein Herz.</p>
-	<button id="likeButton" onclick="likePost()" style="display: block; margin: auto;" <a href="https://www.youtube.com/watch?v=ANDM40myP60"></a>>❤️ <span id="likeCount"></span></button>
+	<button id="likeButton" onclick="likePost()" style="display: block; margin: auto;">❤️ <span id="likeCount"></span></button>
 </section>
 	
 
@@ -117,6 +117,8 @@
     likeCount = snapshot.val() || 0;
     document.getElementById("likeCount").innerText = likeCount + "";
   });
+
+window.location.href = 'https://www.youtube.com/watch?v=ANDM40myP60';
 </script>
 
 	
