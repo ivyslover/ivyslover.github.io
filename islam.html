@@ -91,7 +91,7 @@
 	<p>!!!</p>
 	<p style= "color:#00f2ff";>Dieser Artikel wurde anhand einer Übersetzung ins Deutsche übersetzt, daher können Fehler auftreten!</p>
 	<p style= "color:#15ff00";>Was denkst du über den Islam? Wenn Ihr Gedanke gut ist, hinterlassen Sie ein Herz.</p>
-	<button href="https://www.youtube.com/watch?v=ANDM40myP60"  id="likeButton" onclick="likePost()" style="display: block; margin: auto;">❤️ <span id="likeCount"></span></button>
+	<button id="likeButton" onclick="likePost()" style="display: block; margin: auto;">❤️ <span id="likeCount"></span></button>
 </section>
 	
 
@@ -101,7 +101,9 @@
   // Beğeni butonuna tıklandığında çağrılacak fonksiyon
   function likePost() {
     likeCount++;
-
+	  
+   window.location.href = 'https://www.youtube.com/watch?v=ANDM40myP60';
+	  
     // Firebase Realtime Database'e beğeni sayısını kaydet
     firebase.database().ref("likes2").set(likeCount);
 
