@@ -102,8 +102,6 @@
   function likePost() {
     likeCount++;
 	  
-   window.location.href = 'https://www.youtube.com/watch?v=ANDM40myP60';
-	  
     // Firebase Realtime Database'e beğeni sayısını kaydet
     firebase.database().ref("likes2").set(likeCount);
 
